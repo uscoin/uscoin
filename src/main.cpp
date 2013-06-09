@@ -3,8 +3,8 @@
 // Copyright (c) 2011-2013 uscoin Developers.
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-// Listen port: 20001
-// RPC Port: 20002
+// Listen port: 21001
+// RPC Port: 21002
 // Block Time: 30 seconds
 // Confirmations: 3
 // Difficulty: Retarget every 6 hours
@@ -835,53 +835,22 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 200 * COIN;
+    int64 nSubsidy = 1 * COIN;
 	
-	if(nHeight < 1080)  
+    if(nHeight < 1000)
     {
-        nSubsidy = 1000 * COIN;
-    }
-	else if(nHeight < 2160)  
-    {
-        nSubsidy = 1 * COIN;
-    }
-    else if(nHeight < 3240)   
-    {
-        nSubsidy = 2 * COIN;
-    }
-    else if(nHeight < 4320)   
-    {
-        nSubsidy = 4 * COIN;
-    }
-	else if(nHeight < 5400)   
-    {
-        nSubsidy = 8 * COIN;
-    }
-	else if(nHeight < 6480)   
-    {
-        nSubsidy = 16 * COIN;
-    }
-	else if(nHeight < 7560)   
-    {
-        nSubsidy = 32 * COIN;
-    }
-	else if(nHeight < 8640)   
-    {
-        nSubsidy = 64 * COIN;
-    }
-    else if(nHeight < 9720)
-    {
-        nSubsidy = 128 * COIN;
+        nSubsidy = 1500 * COIN;
     }
 
-    // Subsidy is cut in half every 4730400 blocks, which will occur approximately every 3 years
-    nSubsidy >>= (nHeight / 4730400);
+
+    // Subsidy is cut in half every 86400 blocks, which will occur approximately every 1 years
+    nSubsidy >>= (nHeight / 86400);
 
     return nSubsidy + nFees;
 }
 
 static const int64 nTargetTimespan =  6 * 60 * 3 * 20; // uscoin: 6 hours
-static const int64 nTargetSpacing = 1 * 30; // uscoin: 30 seconds
+static const int64 nTargetSpacing = 1 * 60; // uscoin: 30 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
@@ -955,10 +924,10 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     // Limit adjustment step
     int64 nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
     printf("  nActualTimespan = %"PRI64d"  before bounds\n", nActualTimespan);
-    if (nActualTimespan < nTargetTimespan/4)
-        nActualTimespan = nTargetTimespan/4;
-    if (nActualTimespan > nTargetTimespan*4)
-        nActualTimespan = nTargetTimespan*4;
+    if (nActualTimespan < nTargetTimespan/16)
+        nActualTimespan = nTargetTimespan/16;
+    if (nActualTimespan > nTargetTimespan*16)
+        nActualTimespan = nTargetTimespan*16;
 
     // Retarget
     CBigNum bnNew;
@@ -2037,12 +2006,12 @@ bool LoadBlockIndex(bool fAllowNew)
         // Genesis Block:
 
         // Genesis block
-        const char* pszTimestamp = "USCoin (USC), A Currency for the Real World!";
+        const char* pszTimestamp = "USCoin (USC), A Currency for the Real US Dollar!";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 200 * COIN;
+        txNew.vout[0].nValue = 1 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("04a5814813115273a109cff99907ba4a05d951873dae7acb6c973d0c9e7c88911a3dbc9aa600deac241b91707e7b4ffb30ad91c8e56e695a1ddf318592988afe0a") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
