@@ -7,14 +7,14 @@ BOOST_SUFFIX?=-mgw46-mt-sd-1_53
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
- -I"E:\uscoin-dev\deps\boost_1_53_0" \
- -I"E:\uscoin-dev\deps\db-4.8.30.NC\build_unix" \
- -I"E:\uscoin-dev\deps\openssl-1.0.1e\include"
+ -I"E:\realcoin-dev\deps\boost_1_53_0" \
+ -I"E:\realcoin-dev\deps\db-4.8.30.NC\build_unix" \
+ -I"E:\realcoin-dev\deps\openssl-1.0.1e\include"
 
 LIBPATHS= \
- -L"E:\uscoin-dev\deps\boost_1_53_0\stage\lib" \
- -L"E:\uscoin-dev\deps\db-4.8.30.NC\build_unix" \
- -L"E:\uscoin-dev\deps\openssl-1.0.1e"
+ -L"E:\realcoin-dev\deps\boost_1_53_0\stage\lib" \
+ -L"E:\realcoin-dev\deps\db-4.8.30.NC\build_unix" \
+ -L"E:\realcoin-dev\deps\openssl-1.0.1e"
 
 LIBS= \
  -l boost_system-mgw46-mt-sd-1_53 \
