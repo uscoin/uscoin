@@ -135,13 +135,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to realcoind / RPC client
+            // First part of help message is specific to uscoind / RPC client
             std::string strUsage = _("uscoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  realcoind [options]                     " + "\n" +
-                  "  realcoind [options] <command> [params]  " + _("Send command to -server or realcoind") + "\n" +
-                  "  realcoind [options] help                " + _("List commands") + "\n" +
-                  "  realcoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  uscoind [options]                     " + "\n" +
+                  "  uscoind [options] <command> [params]  " + _("Send command to -server or uscoind") + "\n" +
+                  "  uscoind [options] help                " + _("List commands") + "\n" +
+                  "  uscoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -177,7 +177,7 @@ int main(int argc, char* argv[])
 {
     bool fRet = false;
 
-    // Connect realcoind signal handlers
+    // Connect uscoind signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);
@@ -219,7 +219,7 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -conf=<file>           " + _("Specify configuration file (default: uscoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: realcoind.pid)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: uscoind.pid)") + "\n" +
         "  -gen                   " + _("Generate coins") + "\n" +
         "  -gen=0                 " + _("Don't generate coins") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +

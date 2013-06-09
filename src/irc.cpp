@@ -295,10 +295,10 @@ void ThreadIRCSeed2(void* parg)
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #realcoinTEST3\r");
-            Send(hSocket, "WHO #realcoinTEST3\r");
+            Send(hSocket, "JOIN #uscoinTEST3\r");
+            Send(hSocket, "WHO #uscoinTEST3\r");
         } else {
-            // randomly join #realcoin00-#realcoin99
+            // randomly join #uscoin00-#uscoin99
             int channel_number = GetRandInt(100);
             channel_number = 0; // uscoin: for now, just use one channel
             Send(hSocket, strprintf("JOIN #uscoin%02d\r", channel_number).c_str());

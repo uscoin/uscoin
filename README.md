@@ -48,19 +48,19 @@ Technical Specifications:
 
     Algorithm: Scrypt
 	
-    Block Time: 30 seconds  - Enough time to minimize orphans but still provide almost instant transactions.
+    Block Time: 60 seconds  - Enough time to minimize orphans but still provide almost instant transactions.
 	
     Difficulty: Retargets every 6 hours. It will take 6-8 difficulty adjustments (or ~13000 blocks) to reach desired difficulty of 1. It retargets quickly to adjust to the environment, so stability should not be much of an 
     issue. Miners should also find the system adjusts fast enough to be up to date, but not so fast as to make the environment unpredictable and unstable.
 	
-    Reward: 200 coins per block, halved every 3 years. Consistent rewards encourage miners to support the network long term. Loyalty is rewarded. This also reduces volatility by setting the foundation on a stable path. Due to the fair launch policy, block rewards will grow in value until they reach the 20 coins per block reward. More details below.
+    Reward: 1 coins per block, halved every 1 years. 
 	
-    Maximum coins: 20 billion
+    Maximum coins: 8.88 million
 	
 	
 	
 
-bitcointalk thread: https://bitcointalk.org/index.php?topic=228293
+bitcointalk thread: 
 
 
 Copyright uscoin.org 2013
