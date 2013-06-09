@@ -1,8 +1,8 @@
-realcoin 0.6 BETA
+uscoin 0.6 BETA
 
 Copyright (c) 2009-2012 Bitcoin Developers
 Copyright (c) 2011-2012 Litecoin Developers
-Copyright (c) 2011-2012 realcoin Developers
+Copyright (c) 2011-2012 uscoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -12,7 +12,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com).
 
 Intro
 -----
-realcoin is a free open source peer-to-peer electronic cash system that is
+uscoin is a free open source peer-to-peer electronic cash system that is
 completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
@@ -20,13 +20,13 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-You need the Qt4 run-time libraries to run realcoin-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run uscoin-Qt. On Debian or Ubuntu:
   sudo apt-get install libqtgui4
 
 Unpack the files into a directory and run:
- bin/32/realcoin-qt (GUI, 32-bit)
+ bin/32/uscoin-qt (GUI, 32-bit)
  bin/32/realcoind (headless, 32-bit)
- bin/64/realcoin-qt (GUI, 64-bit)
+ bin/64/uscoin-qt (GUI, 64-bit)
  bin/64/realcoind (headless, 64-bit)
 
 

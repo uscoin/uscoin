@@ -1,8 +1,8 @@
-realcoin 0.1 BETA
+uscoin 0.1 BETA
 
 Copyright (c) 2009-2012 Bitcoin Developers
 Copyright (c) 2011-2012 Litecoin Developers
-Copyright (c) 2011-2012 Realcoin Developers
+Copyright (c) 2011-2012 USCoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -38,17 +38,17 @@ bitcointalk thread:
 
 Setup
 -----
-Unpack the files into a directory and run realcoin-qt.exe.
+Unpack the files into a directory and run uscoin-qt.exe.
 
-If you have Microsoft Security Essentials, you need to add realcoin-qt.exe to its
+If you have Microsoft Security Essentials, you need to add uscoin-qt.exe to its
 "Excluded processes" list.  Microsoft Security Essentials->Settings tab,
-select Excluded processes, press Add, select realcoin-qt.exe, OK, Save changes.
+select Excluded processes, press Add, select uscoin-qt.exe, OK, Save changes.
 
 The software automatically finds other nodes to connect to.  You can
 enable Universal Plug and Play using a menu entry or set your firewall
 to forward port 9333 (TCP) to your computer so you can receive
-incoming connections.  realcoin works without incoming connections,
-but allowing incoming connections helps the realcoin network thrive.
+incoming connections.  uscoin works without incoming connections,
+but allowing incoming connections helps the uscoin network thrive.
 
 See the bitcoin wiki at:
   https://en.bitcoin.it/wiki/Main_Page
