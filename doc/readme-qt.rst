@@ -1,4 +1,4 @@
-uscoin: Qt4 GUI for uscoin
+usacoin: Qt4 GUI for usacoin
 ================================
 
 Build instructions
