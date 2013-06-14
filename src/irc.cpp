@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 usacoin Developers
+// Copyright (c) 2013 uscoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -300,7 +300,7 @@ void ThreadIRCSeed2(void* parg)
         } else {
             // randomly join #usacoin00-#usacoin99
             int channel_number = GetRandInt(100);
-            channel_number = 0; // usacoin: for now, just use one channel
+            channel_number = 0; // uscoin: for now, just use one channel
             Send(hSocket, strprintf("JOIN #usacoin%02d\r", channel_number).c_str());
             Send(hSocket, strprintf("WHO #usacoin%02d\r", channel_number).c_str());
         }

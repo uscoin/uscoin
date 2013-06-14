@@ -1,10 +1,10 @@
-usacoin 0.1 BETA
+uscoin 0.1 BETA
 
 
 
 Copyright (c) 2009-2012 Bitcoin Developers
 Copyright (c) 2011-2012 Litecoin Developers
-Copyright (c) 2011-2013 USACoin Developers
+Copyright (c) 2011-2013 USCoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -63,5 +63,5 @@ Technical Specifications:
 bitcointalk thread: 
 
 
-Copyright usacoin.org 2013
+Copyright uscoin.org 2013
 

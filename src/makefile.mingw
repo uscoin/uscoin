@@ -72,7 +72,7 @@ OBJS= \
     obj/noui.o
 
 
-all: usacoind.exe
+all: uscoind.exe
 
 obj/scrypt.o: scrypt.c
 	gcc -c $(CFLAGS) -o $@ $^
@@ -80,7 +80,7 @@ obj/scrypt.o: scrypt.c
 obj/%.o: %.cpp $(HEADERS)
 	g++ -c $(CFLAGS) -o $@ $<
 
-usacoind.exe: $(OBJS:obj/%=obj/%)
+uscoind.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -92,7 +92,7 @@ test_realcoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 clean:
-	-del /Q usacoind test_usacoin
+	-del /Q uscoind test_uscoin
 	-del /Q obj\*
 	-del /Q obj-test\*
 	-del /Q build.h
